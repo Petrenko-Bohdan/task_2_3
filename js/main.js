@@ -12,7 +12,7 @@ const patterns = {
 
 document.querySelector('form').addEventListener('submit', event =>{
 	event.preventDefault();
-
+	
 	const validator = new Validator()
 
 	const emailValid = validator.isEmail(emailInput.value);
@@ -27,15 +27,15 @@ document.querySelector('form').addEventListener('submit', event =>{
 class Validator{
 
 		isEmail(email){
-			return patterns.emailRegex.test(email);
+			return patterns.email.test(email);
 		};
 	
 		isDate(date){
-			return patterns.dateRegex.test(date);
+			return patterns.date.test(date);
 		};
 	
 		checkPassword(password){
-			return patterns.passwordRegex.test(password);
+			return patterns.password.test(password);
 		};
 }
 
@@ -95,4 +95,12 @@ class Validator{
 // form.addEventListener('submit', event =>{
 // 	event.preventDefault();
 // 	console.log(event.srcElement.querySelectorAll('input'));
+// })
+
+// 18.08
+
+// inputs.forEach((input)=>{
+// 	input.addEventListener('keyup', event =>{
+// 		console.log(event.target.attributes.id.value);
+// 	})
 // })
