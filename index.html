@@ -17,188 +17,199 @@
           <h1 class="header__title">Create Account</h1>
         </header>
         <form action="#" method="" id="form" class="form__body">
-          <div class="form__item first-line">
-            <div class="first-name">
-              <label for="formFirstName" class="form__label">First name*</label>
-              <input
-                id="formFirstName"
-                type="text"
-                name="first name"
-                placeholder="Enter your first name"
-                tabindex="1"
-                class="form__input" required
-              />
-            </div>
-            <div>
-              <label for="formLastName" class="form__label">Last name</label>
-              <input
-                id="formLastName"
-                type="text"
-                name="last name"
-                placeholder="Enter your last name"
-                tabindex="2"
-                class="form__input"
-              />
-            </div>
-          </div>
-          <div class="email">
-            <label for="emailInput" class="form__label">Email*</label>
-            <input
-              id="emailInput"
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-              tabindex="3"
-              class="form__input form__input_email" required
-            />
-          </div>
-          <div class="form__item">
-            <div class="password">
-              <label for="formPassword" class="form__label">Password*</label>
-              <input
-                id="formPassword"
-                type="password"
-                name="password"
-                placeholder="Enter your password"
-                tabindex="4"
-                class="form__input" required
-              />
-            </div>
-            <div class="password">
-              <label for="formConfirmPassword" class="form__label"
-                >Confirm password*</label
-              >
-              <input
-                id="formConfirmPassword"
-                type="password"
-                name="confirmPassword"
-                placeholder="Re-enter your password"
-                class="form__input" required
-              />
-            </div>
-          </div>
-          <div class="form__item">
-            <div class="options__item">
-              <h3 class="form__label">Gender</h3>
-              <input
-                id="formMale"
-                type="radio"
-                value="male"
-                name="gender"
-                tabindex="5"
-                class="options__input_radio"
-              />
-              <label for="formMale">Male</label>
-              <input
-                id="formFemale"
-                type="radio"
-                value="female"
-                name="gender"
-                tabindex="5"
-                class="options__input_radio"
-              />
-              <label for="formFemale">Female</label>
-            </div>
-            <div class="options__item">
-              <h3 class="form__label">Hobbies</h3>
-              <input
-                id="formMusic"
-                type="checkbox"
-                value="music"
-                name="hobbies"
-                tabindex="6"
-                class="options__input_checkbox"
-              />
-              <label for="formMusic">Music</label>
-              <input
-                id="formSports"
-                type="checkbox"
-                value="sports"
-                name="hobbies"
-                tabindex="7"
-                class="options__input_checkbox"
-              />
-              <label for="formSport">Sports</label>
-              <input
-                id="formTravel"
-                type="checkbox"
-                value="travel"
-                name="hobbies"
-                tabindex="8"
-                class="options__input_checkbox"
-              />
-              <label for="formTravel">Travel</label>
-              <input
-                id="formMovies"
-                type="checkbox"
-                value="movies"
-                name="hobbies"
-                tabindex="9"
-                class="options__input_checkbox"
-              />
-              <label for="formMovies">Movies</label>
-            </div>
-          </div>
-          <div class="form__item">
-            <div class="form__select_item">
-              <h3 class="form__label">Data</h3>
-              <input
-							id="date" 
-							type="date" 
-							name="date"
-							value="2017-06-01" />
-            </div>
-						<div class="form__select_item">
-              <h3 class="form__label">Data</h3>
-              <input
-							id="date" 
-							type="text" 
-							name="date"
-							placeholder="DD.MM.YYYY"/>
-            </div>          
-          </div>
-          <div class="form__item">
-            <div class="form__file">
-              <label for="formFile" class="form__label"
-                >Upload profile picture</label
-              >
-              <input
-                id="formFile"
-                accept=".jpg, .png, .gif"
-                type="file"
-                name="file"
-                tabindex="12"
-                class="file__input"
-              />
-            </div>
-            <div class="form__age">
-              <label for="formAge" class="form__label">Age</label>
-              <input
-                id="formAge"
-                type="number"
-                name="age"
-                value="18"
-                tabindex="13"
-                class="form__input"
-              />
-            </div>
-          </div>
-          <div class="message">
-            <label for="formMessage" class="form__label">Bio</label>
-            <textarea
-              name="message"
-              id="formMessage"
-              tabindex="14"
-              class="form__input input__textarea"
-            ></textarea>
-          </div>
-					<button type="submit" id="formButton" class="form__button">Create</button>
-        </form>
-        <footer class="footer">
-          <!-- <button type="submit" id="formButton" class="form__button">Create</button> -->
-        </footer>
+					<div class="form__container">
+						<div class="form__item first-line">
+							<div class="first-name">
+								<label for="formFirstName" class="form__label">First name*</label>
+								<input
+									id="formFirstName"
+									type="text"
+									name="first name"
+									placeholder="Enter your first name"
+									tabindex="1"
+									class="form__input" required
+								/>
+							</div>
+							<div>
+								<label for="formLastName" class="form__label">Last name</label>
+								<input
+									id="formLastName"
+									type="text"
+									name="last name"
+									placeholder="Enter your last name"
+									tabindex="2"
+									class="form__input"
+								/>
+							</div>
+						</div>
+						<div class="email">
+							<label for="formEmail" class="form__label">Email*</label>
+							<input
+								id="formEmail"
+								type="email"
+								name="email"
+								placeholder="Enter your email"
+								tabindex="3"
+								class="form__input form__input_email" required
+							/>
+						</div>
+						<div class="form__item">
+							<div class="password">
+								<label for="formPassword" class="form__label">Password*</label>
+								<input
+									id="formPassword"
+									type="password"
+									name="password"
+									placeholder="Enter your password"
+									tabindex="4"
+									class="form__input" required
+								/>
+							</div>
+							<div class="password">
+								<label for="formConfirmPassword" class="form__label"
+									>Confirm password*</label
+								>
+								<input
+									id="formConfirmPassword"
+									type="password"
+									name="confirmPassword"
+									placeholder="Re-enter your password"
+									class="form__input" required
+								/>
+							</div>
+						</div>
+						<div class="form__item">
+							<div class="options__item">
+								<h3 class="form__label">Gender</h3>
+								<input
+									id="formMale"
+									type="radio"
+									value="male"
+									name="gender"
+									tabindex="5"
+									class="options__input_radio"
+								/>
+								<label for="formMale">Male</label>
+								<input
+									id="formFemale"
+									type="radio"
+									value="female"
+									name="gender"
+									tabindex="5"
+									class="options__input_radio"
+								/>
+								<label for="formFemale">Female</label>
+							</div>
+							<div class="options__item">
+								<h3 class="form__label">Hobbies</h3>
+								<input
+									id="formMusic"
+									type="checkbox"
+									value="music"
+									name="hobbies"
+									tabindex="6"
+									class="options__input_checkbox"
+								/>
+								<label for="formMusic">Music</label>
+								<input
+									id="formSports"
+									type="checkbox"
+									value="sports"
+									name="hobbies"
+									tabindex="7"
+									class="options__input_checkbox"
+								/>
+								<label for="formSport">Sports</label>
+								<input
+									id="formTravel"
+									type="checkbox"
+									value="travel"
+									name="hobbies"
+									tabindex="8"
+									class="options__input_checkbox"
+								/>
+								<label for="formTravel">Travel</label>
+								<input
+									id="formMovies"
+									type="checkbox"
+									value="movies"
+									name="hobbies"
+									tabindex="9"
+									class="options__input_checkbox"
+								/>
+								<label for="formMovies">Movies</label>
+							</div>
+						</div>
+						<div class="form__item">
+							<div class="form__date">
+								<h3 class="form__label">Data</h3>
+								<input
+								id="formDate" 
+								class="date"
+								type="date" 
+								name="date"
+								value="2017-06-01"/>
+							</div>
+							<div class="form__select_item">
+								<h3 class="form__label">Income</h3>
+								<div class="range">
+									<input
+										id="pi_input"
+										type="range"
+										name="income"
+										tabindex="11"
+										class="form__select"
+										min="20"
+										max="100"
+										step="5"
+									/>
+									<p class="range__num">20K <output id="value"></output></p>
+								</div>
+							</div>         
+						</div>
+						<div class="form__item">
+							<div class="form__file">
+								<label for="formFile" class="form__label"
+									>Upload profile picture</label
+								>
+								<input
+									id="formFile"
+									accept=".jpg, .png, .gif"
+									type="file"
+									name="file"
+									tabindex="12"
+									class="file__input"
+								/>
+							</div>
+							<div class="form__age">
+								<label for="formAge" class="form__label">Age</label>
+								<input
+									id="formAge"
+									type="number"
+									name="age"
+									value="18"
+									tabindex="13"
+									class="form__input"
+								/>
+							</div>
+						</div>
+						<div class="message">
+							<label for="formMessage" class="form__label">Bio</label>
+							<textarea
+								name="message"
+								id="formMessage"
+								tabindex="14"
+								class="form__input input__textarea"
+							></textarea>
+						</div>
+					</div>          
+					<div class="form__footer">
+						<button type="submit" id="formButton" class="form__button">Create</button>
+					</div>
+        </form>        
       </div>
     </div>
-		<script src="js/main.js"></script>
+		<script type="module" src="js/main.js"></script>
   </body>
 </html>
+

@@ -21,7 +21,7 @@ p {
 	margin: 0;
 }
 
-$background-color: rgb(255, 216, 115, 0.3);
+$background-color: rgb(255, 131, 115);
 $padding: 2%;
 
 .wrapper {
@@ -56,8 +56,11 @@ $padding: 2%;
 .form__body {
 	display: grid;
 	max-width: 700px;
-	padding: $padding;	
 	margin: 0 auto;
+}
+
+.form__container{
+	padding: $padding;
 }
 
 .form__item {
@@ -97,14 +100,14 @@ $padding: 2%;
 	resize: vertical;	
 }
 
-.footer {
+.form__footer {
 	padding: $padding;
+	
 	border-top: solid 2px rgb(173, 137, 137);
 	border-radius: 0 0 15px 15px;
 	background-color: $background-color;	
 	text-align: right;	
 }
-
 
 
 .form__button {
