@@ -1,106 +1,44 @@
-// const inputs = document.querySelectorAll('input')
-// const form = document.getElementById('form')
-// const formButton = document.getElementById('formButton')
+import Validator from "./validator.js";
 
-const patterns = {
-	password: /^[\w@-]{6,}$/,
-	confirmPassword: /^[\w@-]{6,}$/,
-	email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})$/,
-	date: /([\d]{2})\S([\d]{2})\S([\d]{4})/,
+const validator = new Validator();
+
+function showErr(field, errText){
+	const err = document.createElement('span');
+	field.after(err);
+	err.textContent = errText;
 }
 
-
-document.querySelector('form').addEventListener('submit', event =>{
+form.addEventListener('submit', event =>{
 	event.preventDefault();
 	
-	const validator = new Validator()
+	
 
-	const emailValid = validator.isEmail(emailInput.value);
+	const emailValid = validator.isEmail(formEmail.value);
+	const passwordValid = validator.isPassword(formPassword.value);
+	const confirmPasswordValid = validator.isPassword(formConfirmPassword.value);
+	const dateValid = validator.isDate(formDate.value);
 
 	let errorMessage;
 
+
+
 	if(!emailValid){
-		errorMessage='a'
+		 errorMessage = 'Invalid email. ';
+		 showErr(formEmail, errorMessage);
+	}
+
+	if(!passwordValid){
+		errorMessage = 'Invalid password.';
+		showErr(formPassword, errorMessage);
+	}
+
+	if(!confirmPasswordValid){
+		errorMessage = 'Invalid confirm password.';
+		showErr(formConfirmPassword, errorMessage);
+	}
+
+	if(!dateValid){
+		errorMessage = 'Invalid date.';
+		showErr(formDate, errorMessage);
 	}
 })
-
-class Validator{
-
-		isEmail(email){
-			return patterns.email.test(email);
-		};
-	
-		isDate(date){
-			return patterns.date.test(date);
-		};
-	
-		checkPassword(password){
-			return patterns.password.test(password);
-		};
-}
-
-
-
-
-// function validate(field, regex){
-// 	console.log(regex.test(field.value));
-// }
-
-
-// inputs.forEach((input)=>{
-// 	input.addEventListener('input',(e)=>{
-// 		validate(e.target, patterns[e.target.attributes.name.value]);
-// 	})
-// })
-
-
-// function validate(form){
-// 	form.querySelectorAll('input').forEach(input => {
-// 		// console.log(input);
-// 	});
-// }
-
-// document.getElementById('form').addEventListener("submit", function(event){
-// 	event.preventDefault();
-
-	
-// 	validate(this);
-// })
-
-// document.addEventListener('DOMContentLoaded', function(){
-// 	const form = document.getElementById('form');
-// 	form.addEventListener('submit', event =>{
-// 		event.preventDefault();
-// 		validate(this)
-// 	})
-// })
-
-
-// class validator{
-
-// 	isEmail();
-
-// 	isDate();
-
-// 	checkPassword();
-// }
-
-// console.log(validator.checkPassword());
-
-// function logSubmit() {
-//   console.log("a"):
-// }
-
-
-// form.addEventListener('submit', event =>{
-// 	event.preventDefault();
-// 	console.log(event.srcElement.querySelectorAll('input'));
-// })
-
-// 18.08
-
-// inputs.forEach((input)=>{
-// 	input.addEventListener('keyup', event =>{
-// 		console.log(event.target.attributes.id.value);
-// 	})
-// })
